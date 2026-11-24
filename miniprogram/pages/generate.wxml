@@ -1,0 +1,4 @@
+<view class="container">
+  <button bindtap="generateCode" loading="{{generating}}" disabled="{{generating}}">生成匹配码</button>
+  <text>匹配码：{{code}}</text>
+</view>

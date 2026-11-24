@@ -1,0 +1,5 @@
+<view style="padding: 48rpx;">
+  <view style="font-size: 40rpx; margin-bottom: 24rpx;">生活积分互动小程序</view>
+  <view style="margin-bottom: 40rpx;">使用当前微信身份进入；仅管理员配置的用户可以访问业务数据。</view>
+  <button bindtap="handleLogin" loading="{{loading}}" disabled="{{loading}}">使用当前微信登录</button>
+</view>

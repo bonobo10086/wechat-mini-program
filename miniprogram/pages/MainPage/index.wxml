@@ -1,0 +1,67 @@
+<view style="width:100%; background: none;">
+
+<!-- 轮播图 -->
+<swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" style="background: white; height: 200px; width: 100%;">
+    <swiper-item><image src="Images/HomeCover01.jpg" mode="widthFix" class="swiper-image" /></swiper-item>
+    <swiper-item><image src="Images/HomeCover02.jpg" mode="widthFix" class="swiper-image" /></swiper-item>
+    <swiper-item><image src="Images/HomeCover03.jpg" mode="widthFix" class="swiper-image" /></swiper-item>
+</swiper>
+
+<!-- 积分榜 -->
+<view class="form-group_label">💰 积分榜</view>
+<view class="form-group" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);">
+  <view class="form-cell">
+      <view class="slide">
+        <view class="title">{{userA}}的积分：{{creditA}}</view>
+      </view>
+  </view>
+  <view class="form-cell">
+      <view class="slide">
+        <view class="title">{{userB}}的积分：{{creditB}}</view>
+      </view>
+  </view>
+ 
+</view>
+
+<view style="width:100%;background:none;">
+  <!-- 欢迎回家 -->
+  <view class="form-group_label">🐻 欢迎回家~</view>
+  
+  <!-- 爱心和图片容器 -->
+  <view class="image-love-container">
+    <!-- 左侧的爱心 -->
+    <view class="love-container">
+      <text class="love">❤️</text>
+      <text class="love">❤️</text>
+      <text class="love">❤️</text>
+      <text class="love">❤️</text>
+      <text class="love">❤️</text>
+    </view>
+
+    <!-- 图片容器 -->
+    <view class="image-container">
+      <image src="/images/NewPicture/cat_want_five_kiss.jpg" mode="widthFix" class="small-image" bindtap="handleImageClick" />
+    </view>
+
+
+  </view>
+
+  </view>
+
+<!-- 弹出层 -->
+<view wx:if="{{showModal}}" class="cute-modal">
+  <view class="cute-modal-content">
+    <!-- 可爱表情或插图 -->
+    <view class="emoji-container">😻</view>
+    <text class="cute-text">今天想我了没有~</text>
+    <!-- 按钮 -->
+    <button class="cute-button" bindtap="hidePopup">关闭</button>
+  </view>
+</view>
+
+
+<!-- 服务通知按钮 -->
+<view bindtap="requestSubscribeMessage">接收服务通知</view>
+
+<button bindtap="openCodePage">生成匹配码（实验功能）</button>
+</view>
